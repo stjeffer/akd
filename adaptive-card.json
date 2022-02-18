@@ -1,0 +1,143 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Welcome to Power Apps!",
+                    "wrap": true,
+                    "size": "Large",
+                    "color": "Attention",
+                    "weight": "Bolder"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Welcome. You've taken a step towards building the next big app for Contoso.  This service is here to help you by sharing useful tips as you continue building your Power App.  If you want to check your knowledge, we can also send you small challenges. Would you like to sign up? Please confirm below",
+            "wrap": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step one - Let us know what you are building.  Provide us with as much detail as you can so that we can tailor advice and challenges to you!",
+                    "wrap": true,
+                    "color": "Accent"
+                }
+            ]
+        },
+        {
+            "type": "Input.Text",
+            "isMultiline": true,
+            "isRequired": true,
+            "errorMessage": "You must provide a description of what you are doing",
+            "id": "userAppDescription"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step two - from the options below, select whichever you have a particular interest in",
+                    "wrap": true,
+                    "color": "Accent"
+                }
+            ]
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Canvas apps (Power FX)",
+                    "value": "PFX"
+                },
+                {
+                    "title": "Canvas apps (General)",
+                    "value": "CAN"
+                },
+                {
+                    "title": "Model driven apps",
+                    "value": "MDA"
+                },
+                {
+                    "title": "Dataverse",
+                    "value": "DTV"
+                }
+            ],
+            "isMultiSelect": true,
+            "id": "userTechSelection"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step three - select how often you would like us to contact you",
+                    "wrap": true,
+                    "color": "Accent"
+                }
+            ]
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Daily",
+                    "value": "Daily"
+                },
+                {
+                    "title": "Weekly",
+                    "value": "Weekly"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "isRequired": true,
+            "style": "expanded",
+            "id": "userCadence"
+        },
+        {
+            "type": "Container"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Submit"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Decline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
