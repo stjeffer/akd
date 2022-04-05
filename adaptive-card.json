@@ -101,14 +101,32 @@
             ],
             "isMultiSelect": true,
             "id": "userTechSelection",
-            "style": "expanded"
+            "style": "expanded",
+            "isRequired": true,
+            "errorMessage": "Please let us know the kind of advice we can provide"
         },
         {
             "type": "Container",
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Step three - select how often you would like us to contact you",
+                    "text": "Step three - We also offer challenges, would you like to receive these?",
+                    "wrap": true,
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.Toggle",
+                    "title": "Yes please",
+                    "id": "userChallenges"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step four - select how often you would like us to contact you",
                     "wrap": true,
                     "color": "Accent"
                 }
@@ -129,7 +147,8 @@
             "placeholder": "Placeholder text",
             "isRequired": true,
             "style": "expanded",
-            "id": "userCadence"
+            "id": "userCadence",
+            "errorMessage": "Please select a cadence"
         },
         {
             "type": "Container"
